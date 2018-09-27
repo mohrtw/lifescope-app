@@ -152,6 +152,9 @@ module.exports = {
       'aframe-extras',
       'aframe-gui',
       'aframe-geojson-component',
+      'three',
+      //'three.ar.js',
+      '~/components/ar/aframe-ar.js',
       '~/lib/aframe/play-gaze.js',
       '~/lib/aframe/dynamic-autoplay.js',
       '~/lib/aframe/avatar-rig',
@@ -172,8 +175,9 @@ module.exports = {
         // 'socket.io': 'socket.io-client',
         easyrtc: './static/easyrtc/easyrtc.js',
         // 'window.easyrtc': './node_modules/easyrtc/api/easyrtc.js',
-        mapboxgl: 'mapbox-gl'
-      }),
+        mapboxgl: 'mapbox-gl',
+        // WebAR: './components/ar/aframe-ar.js'
+      })
     ]
 	},
 
@@ -184,7 +188,9 @@ module.exports = {
     {
       src: './plugins/vue-bootstrap-datetimepicker',
       ssr: false
-    }
+    },
+
+    { src: '~/components/ar/aframe-ar.js', ssr: false }
 	],
 
 	serverMiddleware: [

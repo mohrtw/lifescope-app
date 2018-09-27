@@ -33,7 +33,7 @@
   </div>
 
   <!-- list -->
-  <div v-else="if=$store.state.view === 'list'" class="item list" v-bind:id="contact.id" v-on:click="$emit('render-details', contact, 'contact')">
+  <div v-else-if="$store.state.view === 'list'" class="item list" v-bind:id="contact.id" v-on:click="$emit('render-details', contact, 'contact')">
     <div>
       <span>{{ contact.name | truncate(30) }}</span>
     </div>

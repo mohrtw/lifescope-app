@@ -21,7 +21,11 @@
         <a data-view="map" v-bind:class="{ active: $store.state.view === 'map', disabled: $store.state.facet !== 'events' }" v-on:click="setView('map')"><i class="fa fa-map"></i> <span>Map</span></a>
 				<a data-view="grid" v-bind:class="{ active: $store.state.view === 'grid' }" v-on:click="setView('grid')"><i class="fa fa-th"></i> <span>Grid</span></a>
 				<a data-view="list" v-bind:class="{ active: $store.state.view === 'list' }" v-on:click="setView('list')"><i class="fa fa-list"></i> <span>List</span></a>
-				<a data-view="xr" v-bind:class="{ active: $store.state.view === 'xr' }" v-on:click="setView('xr')"><i class="fa fa-cubes"></i> <span>XR</span></a>
+				<a data-view="xr" v-bind:class="{ active: $store.state.view === 'xr' }" v-on:click="setView('xr')"><i class="fa fa-cubes"></i>
+        <span>XR</span></a>
+        <a data-view="ar" v-bind:class="{ active: $store.state.view === 'ar' }" v-on:click="setView('ar')"><i class="fa fa-cubes"></i>
+        <span>AR</span></a>
+
 			</div>
 
 			<div v-if="$store.state.facet === 'events'" class="sort">

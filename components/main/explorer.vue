@@ -2,6 +2,9 @@
   <main v-if="$store.state.view === 'xr'">
     <galleryContainer/>
   </main>
+  <main v-else-if="$store.state.view === 'ar'">
+    <arContainer/>
+  </main>
   <main v-else-if="$store.state.view === 'map'">
     <MapView/>
   </main>
@@ -104,7 +107,9 @@
   import UserEvent from '../objects/event.vue';
 
   import MapView from '../views/map.vue';
-  import galleryContainer from '../xr/gallery-container.vue'
+  import galleryContainer from '../xr/gallery-container.vue';
+  import arContainer from '../ar/ar-globe-marker.vue';
+  // import arContainer from '../ar/ar-torus.vue';
 
   export default {
     data: function() {
@@ -118,7 +123,8 @@
       UserContact,
       UserContent,
       UserEvent,
-      galleryContainer
+      galleryContainer,
+      arContainer
     },
     methods: {
       searchIcon: function(search) {

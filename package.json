@@ -137,6 +137,8 @@
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
     "subscriptions-transport-ws": "^0.9.7",
+    "three": "^0.96.0",
+    "three.ar.js": "^0.1.8",
     "type-detect": "^4.0.8",
     "useragent": "^2.3.0",
     "utf-8-validate": "^4.0.1",

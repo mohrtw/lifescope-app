@@ -1,0 +1,33 @@
+<template>
+<!-- Define your 3d scene and enabled ar.js -->
+	<a-scene embedded arjs='trackingMethod: best; sourceType: webcam;'>
+
+		<!-- Create a anchor to attach your augmented reality -->
+		<a-anchor hit-testing-enabled='true'>
+
+			<!-- Add your augmented reality here -->
+			<a-box position='0 0.5 0' material='opacity: 0.5; side:double; color:red;'>
+				<a-torus-knot radius='0.26' radius-tubular='0.05'>
+					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+				</a-torus-knot>
+			</a-box>
+
+		</a-anchor>
+
+		<!-- Define a static camera -->
+		<a-camera-static/>
+
+    </a-scene>
+</template>
+
+<script>
+
+//import './aframe-ar.js';
+
+export default {
+    mounted () {
+		console.log('ar-torus mounted');
+    }
+}
+
+</script>
